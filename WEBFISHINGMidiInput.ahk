@@ -1,5 +1,5 @@
 ﻿#Requires AutoHotkey v2.0
-#include "Midi2.ahk"
+#include "AutoHotkey-Midi\Midi2.ahk"
 
 midi := AHKMidi()
 midi.midiEventPassThrough := True
