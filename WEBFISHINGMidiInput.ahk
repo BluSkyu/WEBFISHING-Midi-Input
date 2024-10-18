@@ -113,6 +113,11 @@ TabToInput(string, fret) {
 	}
 }
 
+ProcessNote(note, octave) {
+	convertedTab := ConvertToTab(note . octave)
+	TabToInput(convertedTab.string, convertedTab.fret)
+}
+
 
 Class MidiDelegate
 {
@@ -122,60 +127,46 @@ Class MidiDelegate
 
     ; use "s" instead of "#"
     MidiNoteOnA(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnB(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnC(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnD(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnE(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnF(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnG(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnAs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnBs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnCs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnDs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnEs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnFs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
     MidiNoteOnGs(event) {
-		convertedTab := ConvertToTab(event.note . event.octave)
-        TabToInput(convertedTab.string, convertedTab.fret)
+		ProcessNote(event.note, event.octave)
     }
 
     MidiControlChange(event) {
