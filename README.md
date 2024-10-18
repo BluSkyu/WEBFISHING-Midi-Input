@@ -21,6 +21,6 @@ I don't play guitar lol so I tried my best but yk
 
 
 
-##### Credits
-Makes use of [Hetima's](https://github.com/hetima/AutoHotkey-Midi/tree/master "Hetima's fork") of [dannywarren's autohotkey midi lib](http://https://github.com/dannywarren/AutoHotkey-Midi "dannywarren's autohotkey midi lib")
+#### Credits
+Makes use of [Hetima's fork](https://github.com/hetima/AutoHotkey-Midi/tree/master "Hetima's fork") of [dannywarren's autohotkey midi lib](http://https://github.com/dannywarren/AutoHotkey-Midi "dannywarren's autohotkey midi lib")
 With some help from ChatGPT, specifically for the piano note to guitar tab conversion. I don't play guitar, so didn't know how to go about achieving that at all.
