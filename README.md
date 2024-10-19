@@ -12,10 +12,10 @@ Please download the compiled exe in the releases section! Otherwise, you will al
 That's it! Make sure that WEBFISHING is the active process (it won't work if it isn't) then you should be able to play notes on your midi keyboard!
 
 Things to keep in mind:
-WEBFISHING only has 15 frets. This limits the amount of notes you can hit. Anything outside of the range of E2 to E6 will be clamped.
-If you play fast enough, notes that use the same string will interrupt other notes that you play that use the same string. Some chords work well as they use different strings, some don't sound the best.
-Lag can affect it's performance, as it relies on clicking on frets and sending input.
-I don't play guitar lol so I tried my best but yk
+- WEBFISHING only has 15 frets. This limits the amount of notes you can hit. Anything outside of the range of E2 to E6 will be clamped.
+- If you play fast enough, notes that use the same string will interrupt other notes that you play that use the same string. Some chords work well as they use different strings, some don't sound the best.
+- Lag can affect it's performance, as it relies on clicking on frets and sending input.
+- I don't play guitar lol so I tried my best but yk
 
 
 
