@@ -1,7 +1,7 @@
 # WEBFISHING Midi Input
 Created this in AutoHotkey (v2) as a way to translate midi inputs from something like a midi keyboard to keystrokes in WEBFISHING.
 
-
+Please download the compiled exe in the releases section! Otherwise, you will also need the midi2.ahk library I am using, as seen in the project and also listed in the credits.
 
 #### To Use:
 - Run script, in your tray right click and choose a midi input channel.
