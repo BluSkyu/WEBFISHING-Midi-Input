@@ -4,7 +4,7 @@ Created this in AutoHotkey (v2) as a way to translate midi inputs from something
 Please download the compiled exe in the releases section! Otherwise, you will also need the midi2.ahk library I am using, as seen in the project and also listed in the credits.
 
 #### To Use:
-- Run script, in your tray right click and choose a midi input channel.
+- Run script, in your tray right click and choose a midi input channel. (Don't set anything for the output channel.)
 - In game, it should already just work if you play the game at 1920x1080 and fullscreen as that's what I play on. If you don't, though, then you need to:
   1. Hover over the top fret (fret 0) and press Shift+PgUp
   2. Hover over the bottom-most fret (fret 15) and press Shift+PgDn
