@@ -13,8 +13,8 @@ That's it! Make sure that WEBFISHING is the active process (it won't work if it 
 
 Things to keep in mind:
 - This is made for midi input, from things like midi instruments such as keyboards. That was my intended use case, but nothing is stopping you from using midi files to play music either. In order to achieve that, you will need a third party program to play the midi file on, and something to create a midi input. Some midi players have built in output and can create their own midi channel, but you might also have to download a third party program to create a virtual midi channel to use.
-- WEBFISHING only has 15 frets. This limits the amount of notes you can hit. Anything outside of the range of E2 to E6 will be clamped.
-- If you play fast enough, notes that use the same string will interrupt other notes that you play that use the same string. Some chords work well as they use different strings, some don't sound the best.
+- WEBFISHING only has 15 frets. This limits the amount of notes you can hit. Anything outside of the range of E2 to E6 will be clamped. I may change this behavior in the future to just ignore notes out of range as they often sound bad, but am not sure.
+- If you play fast enough, notes that use the same string will interrupt other notes that you play that also use the same string. Some chords work well as they use different strings, some don't sound the best.
 - Lag can affect it's performance, as it relies on clicking on frets and sending input.
 - I don't play guitar lol so I tried my best but yk
 
