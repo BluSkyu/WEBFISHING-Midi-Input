@@ -4,7 +4,7 @@
 midi := AHKMidi()
 midi.midiEventPassThrough := True
 midi.delegate := MidiDelegate()
-;midi.specificProcessCallback := True
+midi.specificProcessCallback := True
 
 ; open midi device manually
 ; midi.OpenMidiInByName("name")
@@ -102,15 +102,13 @@ GetMousePos() {
 
 TabToInput(string, fret) {
 	global pos1, pos2
-	if (WinActive("ahk_exe webfishing.exe")) {
-		mouseYDifference := pos2.y - pos1.y
-		mousePosY := pos1.y + ((mouseYDifference / maxFrets) * fret)
-		Click pos1.x, mousePosY
-		
-		Send("{" . string . " down}")
-		Sleep(25)
-		Send("{" . string . " up}")
-	}
+	mouseYDifference := pos2.y - pos1.y
+	mousePosY := pos1.y + ((mouseYDifference / maxFrets) * fret)
+	Click pos1.x, mousePosY
+	
+	Send("{" . string . " down}")
+	Sleep(25)
+	Send("{" . string . " up}")
 }
 
 ProcessNote(note, octave) {
@@ -126,46 +124,46 @@ Class MidiDelegate
     ; replace any spaces or "." in the process name with "_".
 
     ; use "s" instead of "#"
-    MidiNoteOnA(event) {
+    webfishing_exe_MidiNoteOnA(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnB(event) {
+    webfishing_exe_MidiNoteOnB(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnC(event) {
+    webfishing_exe_MidiNoteOnC(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnD(event) {
+    webfishing_exe_MidiNoteOnD(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnE(event) {
+    webfishing_exe_MidiNoteOnE(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnF(event) {
+    webfishing_exe_MidiNoteOnF(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnG(event) {
+    webfishing_exe_MidiNoteOnG(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnAs(event) {
+    webfishing_exe_MidiNoteOnAs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnBs(event) {
+    webfishing_exe_MidiNoteOnBs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnCs(event) {
+    webfishing_exe_MidiNoteOnCs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnDs(event) {
+    webfishing_exe_MidiNoteOnDs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnEs(event) {
+    webfishing_exe_MidiNoteOnEs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnFs(event) {
+    webfishing_exe_MidiNoteOnFs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    MidiNoteOnGs(event) {
+    webfishing_exe_MidiNoteOnGs(event) {
 		ProcessNote(event.note, event.octave)
     }
 
