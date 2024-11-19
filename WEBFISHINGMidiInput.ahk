@@ -124,46 +124,46 @@ Class MidiDelegate
     ; replace any spaces or "." in the process name with "_".
 
     ; use "s" instead of "#"
-    WEBFISHING_V1_1_MidiNoteOnA(event) {
+    WEBFISHING_v1_1_MidiNoteOnA(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnB(event) {
+    WEBFISHING_v1_1_MidiNoteOnB(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnC(event) {
+    WEBFISHING_v1_1_MidiNoteOnC(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnD(event) {
+    WEBFISHING_v1_1_MidiNoteOnD(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnE(event) {
+    WEBFISHING_v1_1_MidiNoteOnE(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnF(event) {
+    WEBFISHING_v1_1_MidiNoteOnF(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnG(event) {
+    WEBFISHING_v1_1_MidiNoteOnG(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnAs(event) {
+    WEBFISHING_v1_1_MidiNoteOnAs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnBs(event) {
+    WEBFISHING_v1_1_MidiNoteOnBs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnCs(event) {
+    WEBFISHING_v1_1_MidiNoteOnCs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnDs(event) {
+    WEBFISHING_v1_1_MidiNoteOnDs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnEs(event) {
+    WEBFISHING_v1_1_MidiNoteOnEs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnFs(event) {
+    WEBFISHING_v1_1_MidiNoteOnFs(event) {
 		ProcessNote(event.note, event.octave)
     }
-    WEBFISHING_V1_1_MidiNoteOnGs(event) {
+    WEBFISHING_v1_1_MidiNoteOnGs(event) {
 		ProcessNote(event.note, event.octave)
     }
 
