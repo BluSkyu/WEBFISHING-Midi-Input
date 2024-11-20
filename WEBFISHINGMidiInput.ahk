@@ -26,12 +26,13 @@ strings := Map("E2", {baseNote: 40, stringNum: "q"},  ; Low E (6th string)
 
 LoopNotesOutOfRange(midiNote) {
     ; Webfishing guitar range from E2 (MIDI 40) to G5 (MIDI 79)
-    if (midiNote < 40)
+    if (midiNote < 40) {
         note := midiNote + 4
 	note := Mod(note, 12) + 40 ; Loops over the lowest octave
-    else if (midiNote > 79)
+    } else if (midiNote > 79) {
 	note := midiNote + 8
         note := Mod(note, 12) + 64  ; Loops over highest octave
+    }
     return note
 }
 
