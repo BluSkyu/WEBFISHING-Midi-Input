@@ -82,7 +82,6 @@ TabToInput(string, fret) {
 	Click pos1.x, mousePosY
 	
 	Send("{" . string . " down}")
-	Sleep(25)
 	Send("{" . string . " up}")
 }
 
