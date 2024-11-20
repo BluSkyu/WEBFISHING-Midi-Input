@@ -24,17 +24,23 @@ strings := Map("E2", {baseNote: 40, stringNum: "q"},  ; Low E (6th string)
                "B3", {baseNote: 59, stringNum: "t"},  ; B (2nd string)
                "E4", {baseNote: 64, stringNum: "y"})  ; High E (1st string)
 
+LoopNotesOutOfRange(midiNote) {
+    ; Webfishing guitar range from E2 (MIDI 40) to G5 (MIDI 79)
+    if (midiNote < 40)
+        note := midiNote + 4
+	note := Mod(note, 12) + 40 ; Loops over the lowest octave
+    else if (midiNote > 79)
+	note := midiNote + 8
+        note := Mod(note, 12) + 64  ; Loops over highest octave
+    return note
+}
+
 
 ConvertToTab(noteNumber) {
     global strings
     midiNote := noteNumber
 
-    ; Guitar range typically from E2 (MIDI 40) to E6 (MIDI 88)
-    ; Clamp the note to the closest playable note within this range
-    if (midiNote < 40)
-        midiNote := 40  ; Closest is E2 (6th string)
-    else if (midiNote > 88)
-        midiNote := 88  ; Closest is E6 (1st string)
+    midiNote := LoopNotesOutOfRange(midiNote)
 
     closestStringNum := 0
     closestFret := 100  ; High number to ensure we find the closest fret
