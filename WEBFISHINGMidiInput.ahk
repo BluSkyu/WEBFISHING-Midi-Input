@@ -26,12 +26,13 @@ strings := Map("E2", {baseNote: 40, stringNum: "q"},  ; Low E (6th string)
 
 LoopNotesOutOfRange(midiNote) {
     ; Webfishing guitar range from E2 (MIDI 40) to G5 (MIDI 79)
-    if (midiNote < 40)
+    if (midiNote < 40) {
         note := midiNote + 4
 	note := Mod(note, 12) + 40 ; Loops over the lowest octave
-    else if (midiNote > 79)
+    } else if (midiNote > 79) {
 	note := midiNote + 8
         note := Mod(note, 12) + 64  ; Loops over highest octave
+    }
     return note
 }
 
@@ -43,22 +44,38 @@ ConvertToTab(noteNumber) {
     midiNote := LoopNotesOutOfRange(midiNote)
 
     closestStringNum := 0
-    closestFret := 100  ; High number to ensure we find the closest fret
 
-    ; Loop through each guitar string
-    for _, stringData in strings {
-        fret := midiNote - stringData.baseNote  ; Calculate the fret number
-        if (fret >= 0 && fret < closestFret) {  ; Ensure it's a valid fret
-            if (fret > maxFrets)  ; Clamp the fret number to 15 if it's greater than 15
-                fret := maxFrets
-            closestStringNum := stringData.stringNum
-            closestFret := fret
-        }
+    ; Find string for note.
+    Switch(midiNote)
+    {
+    Case midiNote < 40:
+        ToolTip "Error: midiNote too low for strings"
+        SetTimer () => ToolTip(), -5000
+    Case midiNote < 47:
+        stringKey := 'q'
+	fretNumber := midiNote - 40
+    Case midinote < 54:
+        stringKey := 'w'
+	fretNumber := midiNote - 45
+    Case midiNote < 61:
+        stringKey := 'e'
+	fretNumber := midiNote - 50
+    Case midinote < 68:
+        stringKey := 'r'
+	fretNumber := midiNote - 55
+    Case midiNote < 74:
+        stringKey := 't'
+	fretNumber := midiNote - 59
+    Case midinote < 80:
+        stringKey := 'y'
+	fretNumber := midiNote - 64
+    Default:
+        ToolTip "Error: midiNote too high for strings"
+        SetTimer () => ToolTip(), -5000
     }
-
-    ; Return the closest string number and fret number
-    return {string: closestStringNum, fret: closestFret}
+    return {string: stringKey, fret: fretNumber}
 }
+
 
 pos1 := {x:550, y:95}
 pos2 := {x:550, y:1018}
